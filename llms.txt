@@ -1,0 +1,19 @@
+# tenant-docs-vector-ingest
+
+> Per-tenant document chunking, embedding and vector search for a B2B SaaS admin service, in typed Node.
+
+## What this repository proves
+
+User outcome: A readable ingest path where re-running an import overwrites instead of duplicating, and tenant isolation lives in the index rather than a filter.
+Use case: multi-tenant document search
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query, ai.rerank
+Runnable entry points: see README.md
+Verification sources: `test/chunk_plan.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

@@ -1,0 +1,20 @@
+{
+  "name": "tenant-docs-vector-ingest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "onboard": "node --experimental-strip-types src/onboard_tenant.ts",
+    "serve": "node --experimental-strip-types src/admin_service.ts",
+    "test": "node --experimental-strip-types --test test/chunk_plan.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^4.67.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2"
+  }
+}
